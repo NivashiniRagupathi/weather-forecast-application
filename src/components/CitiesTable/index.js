@@ -2,6 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import InfiniteScroll from 'react-infinite-scroll-component';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import './index.css'
 
 const CitiesTable = () => {
   const [cities, setCities] = useState([]);
@@ -95,7 +96,7 @@ const CitiesTable = () => {
                 onContextMenu={(e) => handleRightClick(e, city.name)}
               >
                 <td>{city.name}</td>
-                <td>{city.country_name}</td>
+                <td>{city.cou_name_en}</td>
                 <td>{city.timezone}</td>
               </tr>
             ))}

@@ -1,5 +1,6 @@
 // src/components/SearchBar.js
 import React, { useState } from 'react';
+import './index.css'
 
 const SearchBar = ({ setFilteredCities, cities }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -14,12 +15,14 @@ const SearchBar = ({ setFilteredCities, cities }) => {
   };
 
   return (
-    <input
-      type="text"
-      placeholder="Search cities..."
-      value={searchTerm}
-      onChange={handleSearch}
-    />
+    <div className="search-bar-container">
+      <input
+        type="text"
+        placeholder="Search cities..."
+        value={searchTerm}
+        onChange={handleSearch}
+      />
+    </div>
   );
 };
 
